@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="../css/animations.css">  
     <link rel="stylesheet" href="../css/main.css">  
     <link rel="stylesheet" href="../css/admin.css">
+    <link rel="icon" href="../img/logo.png" type="image/x-icon" />
+
         
     <title>Doctors</title>
     <style>
@@ -273,10 +275,13 @@
         </div>
     </div>
     <?php 
+    
+    $action = $_GET["action"] ?? '';  // This must come_
+    
     if($_GET){
         
         $id=$_GET["id"];
-        $action=$_GET["action"];
+        $action=$_GET["action"] ?? '';
         if($action=='drop'){
             $nameget=$_GET["name"];
             echo '
@@ -435,6 +440,7 @@
             </div>
             ';
         }
+        
         }elseif($action=='edit'){
             $sqlmain= "select * from doctor where docid=?";
             $stmt = $database->prepare($sqlmain);
@@ -627,6 +633,7 @@
 
         }; 
     };
+    
 
 ?>
 </div>
