@@ -1,7 +1,16 @@
 
 body{
     margin: 7%;
-    background-color: #F6F7FA;
+    /* background-color: #F6F7FA; */
+    background-image: url('../img/bg.jpg'); /* Adjust path if needed */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    height: 100vh;
+    /* margin: 0; */
+    padding: 0;
+
 }
 
 
