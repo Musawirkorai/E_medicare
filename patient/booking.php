@@ -306,7 +306,7 @@
                                         </tr>
                                         <tr>
                                             <td>
-                                                <input type="Submit" class="login-btn btn-primary btn btn-book" style="margin-left:10px;padding-left: 25px;padding-right: 25px;padding-top: 10px;padding-bottom: 10px;width:95%;text-align: center;" value="Book now" name="booknow"></button>
+                                                <input type="Submit" class="login-btn btn-primary btn btn-book" style="margin-left:10px;padding-left: 25px;padding-right: 25px;padding-top: 10px;padding-bottom: 10px;width:95%;text-align: center;" value="Book Now" name="booknow"></button>
                                             </form>
                                             </td>
                                         </tr>
@@ -321,6 +321,23 @@
 
 
                             }
+
+                                                        
+                                                        
+                            require_once '../send-email.php'; // Your PHPMailer function file
+
+                            if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['booknow'])) {
+                                // 📩 Send email using existing variables
+                                $result = sendAppointmentEmail($useremail, $username, $apponum, $docname, $title, $appodate, $scheduletime, $hospitalName="E-Medicare Health Center");
+
+                                // ✅ Optional: show message if needed
+                                if ($result !== true) {
+                                    echo "Email sending failed: $result";
+                                }
+                            }
+                            
+
+
                             
                             ?>
  
