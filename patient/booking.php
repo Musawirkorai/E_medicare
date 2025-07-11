@@ -23,6 +23,8 @@
 <body>
     <?php
 
+
+
     //learn from w3schools.com
 
     session_start();
@@ -39,17 +41,10 @@
     }
     
 
-    //import database
-    // include("../connection.php");
+   
 
-    // $sqlmain= "select * from patient where pemail=?";
-    // $stmt = $database->prepare($sqlmain);
-    // $stmt->bind_param("s",$useremail);
-    // $stmt->execute();
-    // $result = $stmt->get_result();
-    // $userfetch=$userrow->fetch_assoc();
-    // $userid= $userfetch["pid"];
-    // $username=$userfetch["pname"];
+
+
 
     include("../connection.php");
 
@@ -73,6 +68,11 @@
     date_default_timezone_set('Asia/Kolkata');
 
     $today = date('Y-m-d');
+
+
+
+
+    
 
 
  //echo $userid;
@@ -306,8 +306,14 @@
                                         </tr>
                                         <tr>
                                             <td>
-                                                <input type="Submit" class="login-btn btn-primary btn btn-book" style="margin-left:10px;padding-left: 25px;padding-right: 25px;padding-top: 10px;padding-bottom: 10px;width:95%;text-align: center;" value="Book Now" name="booknow"></button>
-                                            </form>
+                                                <form action="booking-complete.php" method="POST">
+                                                    <input type="submit" 
+                                                        class="login-btn btn-primary btn btn-book" 
+                                                        name="booknow"
+                                                        value="Book Appointment"
+                                                        style="margin-left:10px;padding:10px 25px;width:95%;text-align: left;">
+                                                </form>
+
                                             </td>
                                         </tr>
                                         '; 
@@ -324,17 +330,7 @@
 
                                                         
                                                         
-                            require_once '../send-email.php'; // Your PHPMailer function file
-
-                            if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['booknow'])) {
-                                // 📩 Send email using existing variables
-                                $result = sendAppointmentEmail($useremail, $username, $apponum, $docname, $title, $appodate, $scheduletime, $hospitalName="E-Medicare Health Center");
-
-                                // ✅ Optional: show message if needed
-                                if ($result !== true) {
-                                    echo "Email sending failed: $result";
-                                }
-                            }
+                           
                             
 
 
