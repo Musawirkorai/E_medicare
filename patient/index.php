@@ -415,6 +415,21 @@
 
         </div>
         </div>
+       <!-- Chatbase Chatbot Embed -->
+<script>
+  window.embeddedChatbotConfig = {
+    chatbotId: "HkDOL11ZLk14u8R0YEi6B",
+    domain: "www.chatbase.co"
+  }
+</script>
+<script
+  src="https://www.chatbase.co/embed.min.js"
+  chatbotId="HkDOL11ZLk14u8R0YEi6B"
+  domain="www.chatbase.co"
+  defer>
+</script>
+<!-- End Chatbase Chatbot -->
+
 
 
 </body>

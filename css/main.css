@@ -597,3 +597,107 @@ input[type=search]:focus {
   background-repeat: no-repeat;
   transition: 0.5s;
 }
+
+
+
+@media screen and (max-width: 1024px) {
+  .container {
+    display: block;
+    width: 100%;
+  }
+
+  .menu {
+    width: 100%;
+    display: flex;
+    overflow-x: auto;
+    padding: 10px 0;
+  }
+
+  .menu-container {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    width: max-content;
+  }
+
+  .menu-row {
+    display: inline-block;
+  }
+
+  .menu-text {
+    padding-left: 10px;
+  }
+
+  .dash-body {
+    margin-top: 10px;
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  .dashboard-items {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .dashboard-icons {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .profile-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .profile-title,
+  .profile-subtitle {
+    text-align: center;
+  }
+
+  .doctor-header,
+  .patient-header {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  input[type="search"] {
+    width: 100% !important;
+    margin-bottom: 10px;
+  }
+
+  form[method="post"] {
+    flex-direction: column;
+  }
+
+  .sub-table thead,
+  .sub-table tbody,
+  .sub-table th,
+  .sub-table td,
+  .sub-table tr {
+    display: block;
+    width: 100%;
+  }
+
+  .sub-table td {
+    text-align: left;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+  }
+
+  .sub-table tr {
+    margin-bottom: 15px;
+    border: 1px solid #eee;
+  }
+
+  .filter-container,
+  .abc {
+    width: 100% !important;
+  }
+
+  .btn,
+  .input-text {
+    width: 100% !important;
+  }
+}

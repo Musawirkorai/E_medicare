@@ -7,7 +7,8 @@
     <link rel="stylesheet" href="css/animations.css">  
     <link rel="stylesheet" href="css/main.css">  
     <link rel="stylesheet" href="css/login.css">
-        
+    <link rel="icon" href="img/logo.png" type="image/x-icon" />
+
     <title>Login</title>
 
     
