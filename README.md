@@ -61,9 +61,5 @@ npm install     # Or composer install (if using PHP)
 # Start the server
 npm start       # Or use PHP server
 
----
 
-Let me know:
-- Which backend you're actually using (PHP, Node.js, etc.)
-- If you want me to generate real screenshot placeholders
-- Whether you'd like to include deployment instructions (e.g., XAMPP or Vercel)
+
